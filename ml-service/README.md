@@ -1,81 +1,129 @@
-Markdown
+```markdown
+# 📌 ML-Service (Resume Intelligence Engine)
 
-# NLP Resume Analysis Module
-
-A self-contained Python module for parsing resumes and scoring them against job descriptions using spaCy and Sentence-Transformers. This module is a core component of the **SkillMentor AI** project.
+This service provides **NLP-powered resume analysis and job matching** APIs.  
+It extracts skills from resumes, compares them against job descriptions, and returns a **match score + skill gap insights**.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Features
+- 🔎 **Resume Parsing** → Extracts candidate name, skills, and experience.  
+- 📂 **Job Description Analysis** → Extracts required skills from job postings.  
+- 🎯 **Similarity Scoring** → Calculates resume-job match score with matched/missing skills.  
+- 📑 **Extensible Skills Database** → Skills managed via `skills.json` (easy to update).  
+- ⚡ **FastAPI Endpoints** → Clean REST APIs for backend integration.  
 
-For teammates already familiar with the project, here's how to get up and running quickly.
+---
+
+## 📂 Project Structure
+```
+
+ml-service/
+├── src/
+│   ├── main.py                # FastAPI entrypoint with API routes
+│   ├── ml/
+│   │   ├── nlp\_pipeline.py    # Resume parsing, skill extraction
+│   │   ├── similarity.py      # Similarity scoring
+│   │   ├── analyzer.py        # Orchestrates resume vs job analysis
+│   │   ├── preprocess.py      # Text cleaning utilities
+│   │   ├── skills.json        # Extensible skill database
+│   │   └── model\_weights/     # Pretrained models (ignored in Git)
+│   └── tests/                 # Pytest-based unit tests
+├── pyproject.toml             # Poetry dependencies
+├── Dockerfile                 # Container setup
+└── README.md                  # This file
+
+````
+
+---
+
+## ⚙️ Setup
+
+### 1️⃣ Install Dependencies
+```bash
+poetry install
+````
+
+### 2️⃣ Run Service
 
 ```bash
-# 1. Install all dependencies using Poetry
-poetry install
+poetry run uvicorn src.main:app --reload --port 8000
+```
 
-# 2. Download the required spaCy model
-poetry run python -m spacy download en_core_web_lg
-The Sentence-Transformer model is included in the src/ml/model_weights/ directory and does not require a separate download.
+Service will be available at:
+👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-⚙️ Module API / How to Use
-The module provides two primary functions.
+---
 
-1. Parsing a Resume
-This function takes raw resume text and returns a structured dictionary containing the candidate's name and a list of identified skills.
+## 🛠️ API Endpoints
 
-File: src/ml/nlp_pipeline.py
+### 🔹 Analyze Resume
 
-Function: parse_resume(resume_text: str) -> dict
+**POST** `/resume/analyze-resume`
 
-Example:
+**Request:**
 
-Python
+```json
+{
+  "resume_text": "John Doe, Software Engineer... Python, Django, AWS..."
+}
+```
 
-from src.ml.nlp_pipeline import parse_resume
+**Response:**
 
-resume = """
-John Doe | New York, NY | 555-123-4567
+```json
+{
+  "name": "John Doe",
+  "skills": ["python", "django", "aws"]
+}
+```
 
-A software engineer with experience in Python and Django.
-Core Skills: Python, JavaScript, SQL, React, Docker.
-"""
+---
 
-parsed_data = parse_resume(resume)
-print(parsed_data)
+### 🔹 Match Resume to Job
 
-# Expected Output:
-# {'skills': ['docker', 'django', 'javascript', 'python', 'react', 'sql'], 'name': 'John Doe'}
-2. Calculating Similarity
-This function takes two lists of skills (one from a resume, one from a job description) and returns a similarity score from 0 to 100.
+**POST** `/resume/match-job`
 
-File: src/ml/similarity.py
+**Request:**
 
-Function: calculate_similarity(resume_skills: list, job_skills: list) -> int
+```json
+{
+  "resume_text": "John Doe, Software Engineer... Python, Django, AWS...",
+  "job_description": "Looking for backend developer skilled in Python, FastAPI, AWS..."
+}
+```
 
-Example:
+**Response:**
 
-Python
+```json
+{
+  "similarity_score": 92,
+  "matched_skills": ["python", "aws"],
+  "missing_skills": ["fastapi"]
+}
+```
 
-from src.ml.nlp_pipeline import extract_skills_from_description
-from src.ml.similarity import calculate_similarity
+---
 
-# Assume 'parsed_data' is from the example above
-resume_skills = parsed_data['skills']
+## 🧪 Run Tests
 
-job_description = "We need a Python developer with FastAPI and SQL experience. Docker is a plus."
-job_skills = extract_skills_from_description(job_description)
+```bash
+poetry run pytest -q
+```
 
-score = calculate_similarity(resume_skills, job_skills)
-print(f"Match Score: {score}%")
+---
 
-# Expected Output:
-# Match Score: 81% (or a similar high score)
-🛠️ Technology Stack
-Dependency Management: Poetry
+## 📌 Notes
 
-Core NLP: spaCy (en_core_web_lg)
+* Skills list can be expanded via `skills.json`.
+* `model_weights/` is **ignored in Git** (too large, handled separately).
+* To integrate, the **Node.js backend** should call these APIs from `analysis.service.js`.
 
-Semantic Similarity: Sentence-Transformers (all-MiniLM-L6-v2)
+---
 
-All project dependencies are defined in the pyproject.toml file.
+```
+
+---
+
+Would you like me to also add a **section for contributors** (so the next ML engineer knows exactly where to add things like `recommendation.py`, `skill_gap_analysis.py`, etc.) inside this README?
+```

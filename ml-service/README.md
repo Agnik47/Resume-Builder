@@ -1,4 +1,4 @@
-```markdown
+
 # 📌 ML-Service (Resume Intelligence Engine)
 
 This service provides **NLP-powered resume analysis and job matching** APIs.  
@@ -121,9 +121,4 @@ poetry run pytest -q
 
 ---
 
-```
 
----
-
-Would you like me to also add a **section for contributors** (so the next ML engineer knows exactly where to add things like `recommendation.py`, `skill_gap_analysis.py`, etc.) inside this README?
-```

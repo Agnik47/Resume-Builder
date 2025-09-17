@@ -1,0 +1,14 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Test files (optional, but good practice)
+test_runner.py
+
+# IDE files
+.vscode/
+.idea/

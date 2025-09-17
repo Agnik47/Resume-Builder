@@ -1,0 +1,20 @@
+{
+    "languages": [
+        "python", "java", "c++", "c", "javascript", "typescript", "go", "ruby", "php", "r", "scala"
+    ],
+    "frameworks": [
+        "django", "flask", "fastapi", "spring", "react", "angular", "vue", "node.js", "express", "next.js"
+    ],
+    "databases": [
+        "mysql", "postgresql", "sqlite", "mongodb", "redis", "cassandra", "oracle"
+    ],
+    "cloud": [
+        "aws", "gcp", "azure", "heroku", "digitalocean", "docker", "kubernetes"
+    ],
+    "ml_ai": [
+        "tensorflow", "pytorch", "scikit-learn", "keras", "huggingface", "opencv", "spacy", "nltk"
+    ],
+    "tools": [
+        "git", "github", "gitlab", "jira", "jenkins", "travis", "circleci", "terraform"
+    ]
+}

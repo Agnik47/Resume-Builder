@@ -2,8 +2,8 @@
 
 from fastapi import APIRouter
 from pydantic import BaseModel
-from src.ml.nlp_pipeline import parse_resume, extract_skills_from_description
-from src.ml.similarity import calculate_similarity
+from ml.nlp_pipeline import parse_resume, extract_skills_from_description
+from ml.similarity import calculate_similarity
 
 router = APIRouter()
 

@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 import spacy
 from spacy.matcher import Matcher
-from src.ml.preprocess import clean_text
+from ml.preprocess import clean_text
 from rapidfuzz import fuzz
 
 # --- spaCy model: try large, fallback to small ---

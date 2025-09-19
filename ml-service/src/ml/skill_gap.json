@@ -1,0 +1,84 @@
+{
+    "data scientist": [
+        "python", "r", "sql", "machine learning", "deep learning",
+        "tensorflow", "pytorch", "scikit-learn", "numpy", "pandas",
+        "matplotlib", "seaborn", "data visualization", "statistics",
+        "natural language processing", "big data", "hadoop", "spark",
+        "cloud platforms", "data wrangling", "feature engineering"
+    ],
+    "frontend developer": [
+        "javascript", "typescript", "react", "vue.js", "angular",
+        "html", "css", "sass", "tailwind css", "bootstrap",
+        "next.js", "redux", "api integration", "graphql", "webpack",
+        "responsive design", "testing (jest, cypress)", "ui frameworks",
+        "cross-browser compatibility", "version control (git)"
+    ],
+    "backend developer": [
+        "python", "java", "c#", "node.js", "express.js",
+        "spring boot", "django", "flask", "sql", "postgresql",
+        "mongodb", "redis", "docker", "kubernetes", "rest api",
+        "graphql", "microservices", "authentication", "testing (pytest, junit)",
+        "cloud services (aws, gcp, azure)"
+    ],
+    "full stack developer": [
+        "javascript", "typescript", "react", "angular", "vue.js",
+        "node.js", "express.js", "django", "flask", "spring boot",
+        "html", "css", "sass", "bootstrap", "tailwind css",
+        "sql", "postgresql", "mongodb", "graphql", "rest api",
+        "docker", "kubernetes", "git", "cloud platforms"
+    ],
+    "ux/ui designer": [
+        "figma", "sketch", "adobe xd", "invision", "illustrator",
+        "photoshop", "wireframing", "prototyping", "user research",
+        "information architecture", "interaction design", "visual design",
+        "design systems", "usability testing", "accessibility (a11y)",
+        "mobile design", "responsive design", "motion design"
+    ],
+    "devops engineer": [
+        "linux", "bash", "python", "docker", "kubernetes",
+        "terraform", "ansible", "jenkins", "gitlab ci/cd", "prometheus",
+        "grafana", "aws", "gcp", "azure", "system monitoring",
+        "networking", "load balancing", "scalability", "cloud security"
+    ],
+    "cybersecurity analyst": [
+        "network security", "penetration testing", "firewalls", "ids/ips",
+        "wireshark", "nmap", "kali linux", "python", "siem tools",
+        "incident response", "threat analysis", "cryptography",
+        "vulnerability scanning", "ethical hacking", "cloud security",
+        "compliance (GDPR, HIPAA)", "risk assessment", "osint"
+    ],
+    "ai/ml engineer": [
+        "python", "r", "c++", "machine learning", "deep learning",
+        "tensorflow", "pytorch", "keras", "scikit-learn", "huggingface",
+        "nlp", "computer vision", "reinforcement learning", "mllib",
+        "sql", "data preprocessing", "cloud ml services",
+        "mlops", "feature engineering", "model deployment"
+    ],
+    "project manager": [
+        "project planning", "scrum", "kanban", "agile methodology",
+        "jira", "confluence", "trello", "microsoft project", "stakeholder management",
+        "risk management", "budgeting", "time management",
+        "communication", "leadership", "quality assurance",
+        "change management", "resource allocation"
+    ],
+    "business analyst": [
+        "requirement gathering", "sql", "excel", "tableau",
+        "power bi", "data analysis", "process modeling",
+        "uml diagrams", "stakeholder communication",
+        "business process management", "agile methodology",
+        "user stories", "gap analysis", "documentation"
+    ],
+    "cloud engineer": [
+        "aws", "gcp", "azure", "terraform", "cloudformation",
+        "docker", "kubernetes", "linux", "python", "boto3",
+        "ci/cd pipelines", "cloud networking", "serverless architecture",
+        "monitoring", "iam", "cost optimization"
+    ],
+    "qa engineer": [
+        "manual testing", "automated testing", "selenium", "cypress",
+        "junit", "pytest", "api testing", "performance testing",
+        "load testing", "test planning", "bug tracking",
+        "jira", "test automation frameworks", "ci/cd integration",
+        "security testing", "mobile testing"
+    ]
+}

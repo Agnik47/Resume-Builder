@@ -1,7 +1,7 @@
 # backend/src/ml/analyzer.py
 
-from src.ml.nlp_pipeline import parse_resume, extract_skills_from_description
-from src.ml.similarity import calculate_similarity
+from ml.nlp_pipeline import parse_resume, extract_skills_from_description
+from ml.similarity import calculate_similarity
 
 def analyze_resume_vs_job(resume_text: str, job_description: str) -> dict:
     """
@@ -19,6 +19,8 @@ def analyze_resume_vs_job(resume_text: str, job_description: str) -> dict:
 
     # Calculate similarity score
     similarity_score, matched, missing = calculate_similarity(resume_skills, job_skills, return_details=True)
+    
+    print(f"Resume Skills: {resume_skills}")
 
     return {
         "resume": parsed_resume,
@@ -29,3 +31,14 @@ def analyze_resume_vs_job(resume_text: str, job_description: str) -> dict:
             "missing_skills": missing
         }
     }
+
+
+resume_text = """John Doe
+    Software Engineer
+    Skills: Python, Java, SQL
+    Experience: 5 years in software development."""
+    
+job_description = """We are looking for a Software Engineer with skills in Python, Docker, Kubernetes, and AWS."""
+    
+result = analyze_resume_vs_job(resume_text, job_description)
+print(result)

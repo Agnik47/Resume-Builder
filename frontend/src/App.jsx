@@ -11,7 +11,7 @@ import InterviewMentor from "./pages/InterviewMentor";
 
 const App = () => {
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen bg-white">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<Dashboard />}>

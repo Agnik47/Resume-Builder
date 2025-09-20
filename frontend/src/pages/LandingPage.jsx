@@ -1,8 +1,7 @@
 
-import React from "react";
-import Navbar from "./Navbar";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
+import gsap from "gsap";
 
 // Navbar Component
 const Navbar = () => {
@@ -189,4 +188,5 @@ const SectionsPage = () => {
   );
 };
 
-export { LandingPage, SectionsPage };
+export { LandingPage, SectionsPage }; 
+export default LandingPage;

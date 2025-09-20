@@ -1,62 +1,74 @@
-import React from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink
-import {
-  FaFileAlt,
-  FaChartLine,
-  FaRoute,
-  FaBook,
-  FaComments,
-} from "react-icons/fa";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaFileAlt, FaChartLine, FaRoute, FaBook } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const Sidenavbar = () => {
+const Sidenavbar = ({ show }) => {
   const navItems = [
-    {
-      name: "Resume Analyzer",
-      icon: <FaFileAlt />,
-      path: "/dashboard/analyzer",
-    },
-    {
-      name: "Skill Gap Finder",
-      icon: <FaChartLine />,
-      path: "/dashboard/skill-gap",
-    },
-    { name: "Roadmap", icon: <FaRoute />, path: "/dashboard/roadmap" },
-    //... other items
+    { name: 'Analyzer', icon: <FaFileAlt />, path: '/dashboard/analyzer' },
+    { name: 'Skill Gap', icon: <FaChartLine />, path: '/dashboard/skill-gap' },
+    { name: 'Roadmap', icon: <FaRoute />, path: '/dashboard/roadmap' },
+    { name: 'Resources', icon: <FaBook />, path: '/dashboard/resources' },
   ];
 
-  const activeLinkStyle = {
-    backgroundColor: "#374151", // A darker gray for the active link (bg-gray-700)
+  const sidebarVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+    exit: { opacity: 0, x: -100, transition: { duration: 0.3, ease: 'easeInOut' } },
+  };
+
+  const navItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.3 + i * 0.1, // Staggered delay for each item
+        duration: 0.4,
+      },
+    }),
   };
 
   return (
-    <div className="w-64 h-screen bg-gray-800 text-white flex flex-col">
-      {/* ... (Logo/Header code remains the same) ... */}
-      <div className="p-5 border-b border-gray-700">
-        <h1 className="text-2xl font-bold">SkillMentor AI</h1>
-      </div>
-      <nav className="flex-1 p-2">
-        <ul>
-          {navItems.map((item) => (
-            <li key={item.name} className="mb-2">
-              <NavLink
-                to={item.path}
-                // This style prop automatically applies when the link is active
-                style={({ isActive }) =>
-                  isActive ? activeLinkStyle : undefined
-                }
-                className="flex items-center p-3 rounded-lg hover:bg-gray-700 transition-colors"
-              >
-                <span className="mr-3 text-lg">{item.icon}</span>
-                {item.name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className="p-5 border-t border-gray-700">
-        <p>User Profile</p>
-      </div>
-    </div>
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          variants={sidebarVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="w-64 h-screen bg-gray-900 text-gray-200 flex flex-col shadow-lg"
+        >
+          <div className="p-5 border-b border-gray-700">
+            <h1 className="text-2xl font-bold text-white">SkillMentor AI</h1>
+          </div>
+          <nav className="flex-1 p-2">
+            <ul>
+              {navItems.map((item, i) => (
+                <motion.li key={item.name} custom={i} variants={navItemVariants}>
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `flex items-center p-3 my-1 rounded-lg transition-colors duration-200 ${
+                        isActive
+                          ? 'bg-blue-600 text-white'
+                          : 'hover:bg-gray-700 text-gray-300'
+                      }`
+                    }
+                  >
+                    <span className="mr-4 text-lg">{item.icon}</span>
+                    {item.name}
+                  </NavLink>
+                </motion.li>
+              ))}
+            </ul>
+          </nav>
+          <div className="p-5 border-t border-gray-700">
+            <p className="text-gray-400">User Profile</p>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

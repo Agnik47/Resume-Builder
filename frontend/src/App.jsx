@@ -3,8 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
 import ResumeAnalyzer from "./pages/ResumeAnalyzer";
-import SkillGapFinder from "./SkillGapFinder";
+import SkillGapFinder from "./pages//SkillGapFinder";
 import Roadmap from "./pages/Roadmap";
+import Resourses from "./pages/Resourses";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="analyzer" element={<ResumeAnalyzer />} />
           <Route path="skill-gap" element={<SkillGapFinder />} />
           <Route path="roadmap" element={<Roadmap />} />
+          <Route path="resources" element={<Resourses />} />
         </Route>
       </Routes>
     </div>

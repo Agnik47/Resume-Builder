@@ -1,27 +1,7 @@
 
-/*import React from 'react'
-import Navbar from '../components/Landing/Navbar'
-import { Link } from 'react-router-dom'
-
-function LandingPage() {
-
-/*function LandingPage() {
->>>>>>> e7c8009 (frontend changes commited)
-  return (
-    <div>
-        <Navbar />
-        <Link to='/dashboard'>Go to Dashboard</Link>
-    </div>
-  )
-}
-<<<<<<< HEAD
-
-export default LandingPage
-=======
-*/
 import React from "react";
-import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Landing/Navbar";
 
 const Hero = () => {
   return (

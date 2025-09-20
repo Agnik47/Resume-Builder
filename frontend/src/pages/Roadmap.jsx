@@ -78,7 +78,7 @@ const Roadmap = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4  pl-64">
       <h1 className="text-3xl font-bold mb-2">Your Personalized Roadmap</h1>
       <p className="text-gray-600 mb-8">
         Based on your resume, here is a step-by-step plan to become a job-ready Frontend Developer.

@@ -31,7 +31,7 @@ const SkillGapFinder = () => {
 
   return (
     <motion.div
-        className="p-4"
+        className="p-4  pl-64"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

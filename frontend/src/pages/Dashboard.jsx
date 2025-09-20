@@ -10,11 +10,10 @@ const Dashboard = () => {
 
   return (
     <div className='flex w-full min-h-screen bg-gray-50'>
-      {/* Conditionally render the Sidenavbar with an animation */}
       <Sidenavbar show={isAnalyzed} />
 
       {/* The Outlet will render the current page (e.g., ResumeAnalyzer) */}
-      <main className='flex-1 p-6 md:p-8 overflow-y-auto'>
+      <main className='flex-1 p-6 md:p-8  overflow-y-auto'>
         <Outlet />
       </main>
     </div>

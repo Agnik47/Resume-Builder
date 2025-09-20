@@ -6,6 +6,7 @@ import ResumeAnalyzer from "./pages/ResumeAnalyzer";
 import SkillGapFinder from "./pages//SkillGapFinder";
 import Roadmap from "./pages/Roadmap";
 import Resourses from "./pages/Resourses";
+import InterviewMentor from "./pages/InterviewMentor";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="skill-gap" element={<SkillGapFinder />} />
           <Route path="roadmap" element={<Roadmap />} />
           <Route path="resources" element={<Resourses />} />
+          <Route path="interview-monitor" element={<InterviewMentor />} />
         </Route>
       </Routes>
     </div>

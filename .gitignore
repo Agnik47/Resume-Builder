@@ -1,1 +1,14 @@
 .venv/
+node_modules/
+# dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# build
+dist/
+build/
+
+# misc
+.DS_Store
+.env

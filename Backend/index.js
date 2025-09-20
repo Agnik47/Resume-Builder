@@ -2,12 +2,12 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
-const cors=require('cors')
-const cookieParser = require('cookie-parser')
+// const PORT = process.env.PORT || 3000; // <- Vercel ke liye iski zaroorat nahi
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
 // Import database connection
-const { connectDB } = require('./src/config/database.js')
+const { connectDB } = require('./src/config/database.js');
 
 // Import your central API router
 const userRouter = require('./src/api/routes/user.route.js'); 
@@ -19,28 +19,26 @@ connectDB();
 
 //use all cors
 app.use(cors({
-  origin:[
-    "*"
+  origin: [
+    "*" // Note: Production mein ise specific domain se replace karna better hai
   ],
- credentials:true
-}))
+  credentials: true
+}));
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-app.use(cookieParser())
-app.use(express.urlencoded({extended:true}))
-
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: true }));
 
 // Mount the API router
-app.use('/users',userRouter)
-
-app.use('/resumes',resumeRouter)
-
-app.use('/matching',matchingRouter)
-
-
+app.use('/users', userRouter);
+app.use('/resumes', resumeRouter);
+app.use('/matching', matchingRouter);
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// }); // <- YEH LINE HATA DI GAYI HAI
+
+// VERCEL KE LIYE YEH ZAROORI HAI
+module.exports = app;

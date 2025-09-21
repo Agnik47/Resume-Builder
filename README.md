@@ -1,63 +1,55 @@
-
-
-
-# SkillAdvisor AI
+# 🌟 SkillAdvisor AI  
 
 <p align="center">
-	<img src="images/dashboard.jpg" alt="SkillAdvisor AI Dashboard" width="600"/>
-</p>
+  <img src="images/dashboard.jpg" alt="SkillAdvisor AI Dashboard" width="650"/>
+</p>  
 
-Welcome to **SkillAdvisor AI** – your intelligent, all-in-one platform for building a standout resume, discovering your strengths, and planning your next career move. SkillAdvisor AI combines advanced machine learning, natural language processing, and a modern web experience to help you unlock your full professional potential.
-
-Whether you're a job seeker, a student, a career changer, or simply curious about your skills, SkillAdvisor AI is designed to guide you every step of the way. Our mission is to make career development accessible, data-driven, and empowering for everyone.
-
-## Table of Contents
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Backend API](#backend-api)
-- [ML Service](#ml-service)
-- [Frontend](#frontend)
-- [Contributing](#contributing)
-- [License](#license)
+<p align="center">
+  <b>🚀 Unlock Your Career Potential with AI-powered Insights</b><br/>
+  Build a standout resume, discover your strengths, and plan your next career move – all in one place.
+</p>  
 
 ---
 
-
-
-
-## Features
-
-- **Effortless Resume Upload & Parsing**: Upload your resume in PDF, DOCX, or TXT format. Our AI extracts your education, experience, skills, and more, structuring it for deep analysis.
-  
-	<img src="images/resume_analyzer.jpg" alt="Resume Upload & Analyzer" width="500"/>
-
-- **Skill Gap Analysis**: Instantly see which skills you have, which ones you’re missing for your target roles, and get actionable suggestions to close the gap.
-  
-	<img src="images/skill_gap.jpg" alt="Skill Gap Analysis" width="500"/>
-
-- **Personalized Career Path Recommendations**: Unsure about your next move? Get tailored career path suggestions based on your background, interests, and real-world job market data.
-  
-	<img src="images/roadmap.jpg" alt="Career Path Roadmap" width="500"/>
-
-- **ATS Compatibility Check**: Ensure your resume passes through Applicant Tracking Systems. Receive a detailed ATS score and specific tips to improve your chances.
-
-- **Job & Skill Matching**: Discover jobs that fit your current skills, and get recommendations for courses or certifications to boost your profile.
-
-- **Interactive Dashboard**: Manage your resumes, track your progress, and explore analytics and recommendations in a clean, intuitive interface.
-  
-	<img src="images/analyzer_dashboard.jpg" alt="Analytics Dashboard" width="500"/>
-
-- **Privacy First**: Your data stays yours. We never share your information without your consent.
-## Example Use Cases
-
-- **Students**: Identify the skills you need for your dream job and plan your learning journey.
-- **Job Seekers**: Optimize your resume for ATS, discover new roles, and get personalized upskilling advice.
-- **Career Changers**: Map your current skills to new industries and receive a step-by-step transition plan.
-- **Professionals**: Benchmark your skills, track your growth, and stay competitive in the job market.
+<p align="center">
+  <a href="https://github.com/Agnik47/Resume-Builder/stargazers"><img src="https://img.shields.io/github/stars/Agnik47/Resume-Builder?color=yellow&style=for-the-badge" alt="Stars"/></a>
+  <a href="https://github.com/Agnik47/Resume-Builder/network/members"><img src="https://img.shields.io/github/forks/Agnik47/Resume-Builder?color=blue&style=for-the-badge" alt="Forks"/></a>
+  <a href="https://github.com/Agnik47/Resume-Builder/issues"><img src="https://img.shields.io/github/issues/Agnik47/Resume-Builder?color=red&style=for-the-badge" alt="Issues"/></a>
+  <a href="https://github.com/Agnik47/Resume-Builder/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Agnik47/Resume-Builder?color=green&style=for-the-badge" alt="License"/></a>
+</p>  
 
 ---
+
+## ✨ Features  
+
+- 📄 **Effortless Resume Upload & Parsing** – Upload PDF/DOCX/TXT resumes, get instant structured insights.  
+- 🧩 **Skill Gap Analysis** – See what skills you lack and how to acquire them.  
+- 🎯 **Career Path Recommendations** – AI-tailored paths based on your skills & interests.  
+- 🏆 **ATS Compatibility Check** – Get an ATS score + suggestions to improve chances.  
+- 💼 **Job & Skill Matching** – Match current skills to jobs & learning resources.  
+- 📊 **Interactive Dashboard** – Visualize analytics & growth in a sleek UI.  
+- 🔒 **Privacy First** – Your data stays with you.  
+
+<p align="center">
+  <img src="images/analyzer_dashboard.jpg" alt="Analytics Dashboard" width="600"/>
+</p>  
+
+---
+
+## 🎥 Demo & Preview  
+
+| Resume Analyzer | Career Path Roadmap | Skill Gap Insights |
+|-----------------|----------------------|-------------------|
+| <img src="images/resume_analyzer.jpg" width="300"/> | <img src="images/roadmap.jpg" width="300"/> | <img src="images/skill_gap.jpg" width="300"/> |
+
+🚀 *Coming soon: Live demo link & walkthrough video*  
+
+---
+
+## 📂 Project Structure  
+
+<details>
+<summary>Click to Expand 📁</summary>
 
 
 

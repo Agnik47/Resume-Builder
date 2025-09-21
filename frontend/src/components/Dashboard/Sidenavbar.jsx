@@ -63,6 +63,7 @@ const Sidenavbar = ({ show }) => {
                 <motion.li key={item.name} custom={i} variants={navItemVariants} initial="hidden" animate="visible">
                   <NavLink
                     to={item.path}
+                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     className={({ isActive }) =>
                       `flex items-center p-3 my-1 rounded-lg transition-colors duration-200 whitespace-nowrap ${
                         isActive

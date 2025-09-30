@@ -102,7 +102,7 @@ class ResumeOptimizer:
 # Example of how this class is used in your FastAPI backend
 if __name__ == '__main__':
     # You would load the API key from an environment variable in a real application
-    GEMINI_API_KEY = "AIzaSyAa_E87lm7tBt_5aJijHoP52Q5yRdVkY_U"
+    GEMINI_API_KEY = "APIKEY"
     if not GEMINI_API_KEY:
         print("Error: GEMINI_API_KEY environment variable is not set. Exiting.")
         exit()
